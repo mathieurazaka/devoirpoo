@@ -1,35 +1,70 @@
-#include "rationnel.h"
+#include <string>
+#include "Personne.h"
+#include "Infrastructure.h"
+#include "Etablissement.h"
+#include "Enseignant.h"
+#include "Etudiant.h"
+#include "Hopital.h"
+#include "Medecin.h"
 
 using namespace std;
+
 int main ()
 {
-    int num1,denom1,num2,denom2;
-    
-    num1 = GetNum();
-    denom1 = GetDen();
-    num2 = GetNum();
-    denom2 = GetDen();
+	string nom,prenom,sexe,NomDuLieu,Lieu;
+	int age;
+	
+	Personne p;
+	p.SetName("RAZAKANIRINA");
+	nom = p.GetName();
+	p.SetFirstName("Andrianina Mathieu");
+	prenom = p.GetFirstName();
+	p.SetYear(19);
+	age = p.GetYear();
+	p.SetGender("Masculin");
+	sexe = p.GetGender();
 
-    rationnel r1;
-    r1.Setnumerateur(num1);
-    r1.Setdenominateur(denom1);
+	Etablissement ecole;
+	ecole.SetNameOfEtablishment("Universite MIT");
+	NomDuLieu = ecole.GetNameOfEtablishment();
+	ecole.SetPlaceOfEtablishment("Ankantso");
+	Lieu = ecole.GetPlaceOfEtablishment();
 
-    rationnel r2;
-    r2.Setnumerateur(num2);
-    r2.Setdenominateur(denom2);
+	Etudiant eleve;
+	eleve.SetName(nom);
+	eleve.SetFirstName(prenom);
+	eleve.SetYear(age);
+	eleve.SetGender(sexe);
+	eleve.SetLevel("L2");
 
-    
-    rationnel somme = r1.somme(r2);
-    rationnel soustraction = r1.soustraction(r2);
-    rationnel multiplication = r1.produit(r2);
-    rationnel division = r1.division(r2);
+	Enseignant prof;
+	prof.SetName("RABEKOTOLINA");
+	nom = prof.GetName();
+	prof.SetFirstName("Sylvia");
+	prenom = prof.GetFirstName();
+	prof.SetYear(45);
+	age = prof.GetYear();
+	prof.SetGender("Feminin");
+	sexe = prof.GetGender();
+	prof.SetMatter("SVT");
 
+	Hopital HJRA;
+	HJRA.SetNameOfEtablishment("Hopital Joseph Ravoahangy Andrianavalona");
+	HJRA.SetPlaceOfEtablishment("Anosy");
+	HJRA.SetTypeOfHospital("Public");
 
-    r1.display("Le rationnel 1");
-    r2.display("Le rationnel 2");
-    somme.display("La somme ");
-    soustraction.display("La soutraction ");
-    multiplication.display("La multiplication ");
-    division.display("La division ");
-    return(0);
+	Medecin psycologue;
+	psycologue.SetName(nom);
+	psycologue.SetFirstName(prenom);
+	psycologue.SetYear(age);
+	psycologue.SetGender(sexe);
+	psycologue.SetSpecialty("psycologue");
+
+	p.DisplayOfPerson();
+	ecole.DisplayOfEtablishment();
+	eleve.DisplayOfStudent();
+	prof.DisplayOfTeacher();
+	HJRA.DisplayOfHospital();
+	psycologue.DisplayOfDoctor();
+	return (0);
 }
