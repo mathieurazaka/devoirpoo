@@ -1,11 +1,10 @@
 #ifndef ETABLISSEMENT_H
 #define ETABLISSEMENT_H
 #include <string>
-#include "Infrastructure.h"
 
 using namespace std;
 
-class Etablissement : public Infrastructure
+class Etablissement
 {
 	//Attribut d'un etablissement
 	string nomEtablissement;

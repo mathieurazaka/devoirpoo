@@ -2,6 +2,12 @@
 #include <string>
 #include "Infrastructure.h"
 
+using namespace std;
+
+Infrastructure::Infrastructure()
+{
+}
+
 void Infrastructure::SetNameOfInfrastructure(string nameOfInfrastructure)
 {
 	nomInfrastructure = nameOfInfrastructure;
@@ -25,4 +31,8 @@ string Infrastructure::GetPlaceOfInfrastructure()
 void Infrastructure::DisplayOfInfrastructure()
 {
 	cout << "Le nom de l'infrastructure est "  << nomInfrastructure << " et il se trouve a " << lieuInfrastructure << endl;
+}
+
+Infrastructure::~Infrastructure()
+{
 }

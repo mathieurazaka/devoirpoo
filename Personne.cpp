@@ -4,6 +4,10 @@
 
 using namespace std;
 
+Personne::Personne()
+{
+}
+
 void Personne::SetName(string name)
 {
 	nom = name;
@@ -52,3 +56,6 @@ void Personne::DisplayOfPerson()
 	cout << "Votre sexe  est " << genre << endl;
 }
 
+Personne::~Personne()
+{
+}

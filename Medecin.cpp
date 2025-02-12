@@ -3,6 +3,10 @@
 
 using namespace std;
 
+Medecin::Medecin()
+{
+}
+
 void Medecin::SetSpecialty(string specialtyOfDoctor)
 {
 	specialitee = specialtyOfDoctor;
@@ -18,4 +22,8 @@ void Medecin::DisplayOfDoctor()
 	Personne::DisplayOfPerson();
 	Hopital::DisplayOfEtablishment();
 	cout << "Votre specialitee est " << specialitee << endl;
+}
+
+Medecin::~Medecin()
+{
 }

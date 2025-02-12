@@ -60,11 +60,17 @@ int main ()
 	psycologue.SetGender(sexe);
 	psycologue.SetSpecialty("psycologue");
 
+	cout << "Info du personne:" << endl;
 	p.DisplayOfPerson();
+	cout << "Info d'un etablissement:" << endl;
 	ecole.DisplayOfEtablishment();
+	cout << "Info d'un etudiant:" << endl;
 	eleve.DisplayOfStudent();
+	cout << "Info d'un proffesseur:" << endl;
 	prof.DisplayOfTeacher();
+	cout << "Info d'un hopital:" << endl;
 	HJRA.DisplayOfHospital();
+	cout << "Info d'un medecin:" << endl;
 	psycologue.DisplayOfDoctor();
 	return (0);
 }

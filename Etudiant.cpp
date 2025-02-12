@@ -4,6 +4,10 @@
 
 using namespace std;
 
+Etudiant::Etudiant()
+{
+}
+
 void Etudiant::SetLevel(string levelOfStudent)
 {
 	niveau = levelOfStudent;
@@ -19,4 +23,8 @@ void Etudiant::DisplayOfStudent()
 	Personne::DisplayOfPerson();
 	cout << "Vous etez en " << niveau << endl;
 	Etablissement::DisplayOfEtablishment();
+}
+
+Etudiant::~Etudiant()
+{
 }

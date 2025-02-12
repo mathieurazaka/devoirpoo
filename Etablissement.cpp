@@ -4,6 +4,10 @@
 
 using namespace std;
 
+Etablissement::Etablissement()
+{
+}
+
 void Etablissement::SetNameOfEtablishment(string nameOfEtablishment)
 {
 	nomEtablissement = nameOfEtablishment;
@@ -26,6 +30,9 @@ string Etablissement::GetPlaceOfEtablishment()
 		
 void Etablissement::DisplayOfEtablishment()
 {
-	Infrastructure::DisplayOfInfrastructure();
 	cout << "Votre etablissement s'appel : " << nomEtablissement << " et il se trouve a " << lieuEtablissement << endl;
+}
+
+Etablissement::~Etablissement()
+{
 }

@@ -4,6 +4,10 @@
 
 using namespace std;
 
+Hopital::Hopital()
+{
+}
+
 void Hopital::SetTypeOfHospital(string TypeOfHospital)
 {
 	TypeHopital = TypeOfHospital;
@@ -18,4 +22,8 @@ void Hopital::DisplayOfHospital()
 {
 	Etablissement::DisplayOfEtablishment();
 	cout << "L'hopital est " << TypeHopital <<endl;
+}
+
+Hopital::~Hopital()
+{
 }
